@@ -67,4 +67,8 @@ const addProduct = async () => {
   console.log(farm);
 };
 
-addProduct();
+Farm.findOne({ name: "Full Belly Farms" })
+  .populate("products") //because we used ref in farm schema and related it to our products, we can use .populate('here we tell it what we want to populate with') here and show our products instead of only showing their ids
+  .then((farm) => console.log(farm));
+
+// addProduct();
