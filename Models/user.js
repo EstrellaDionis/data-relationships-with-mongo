@@ -35,6 +35,7 @@ const makeUser = async () => {
     last: "Potter",
   });
   u.addresses.push({
+    //attaching the user to the addresses
     street: "123 Sesame St.",
     city: "New York",
     state: "NY",
